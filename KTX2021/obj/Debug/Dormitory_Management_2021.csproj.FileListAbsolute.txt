@@ -1,0 +1,277 @@
+C:\Workspace\KTX2021\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Workspace\KTX2021\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Workspace\KTX2021\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Workspace\KTX2021\KTX2021\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Workspace\KTX2021\KTX2021\bin\Debug\EntityFramework.dll
+C:\Workspace\KTX2021\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspace\KTX2021\KTX2021\bin\Debug\Guna.UI.dll
+C:\Workspace\KTX2021\KTX2021\bin\Debug\Guna.UI2.dll
+C:\Workspace\KTX2021\KTX2021\bin\Debug\XanderUI.dll
+C:\Workspace\KTX2021\KTX2021\bin\Debug\EntityFramework.xml
+C:\Workspace\KTX2021\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CopyComplete
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Workspace\KTX2021\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\EntityFramework.dll
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\Guna.UI.dll
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\Guna.UI2.dll
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\XanderUI.dll
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\EntityFramework.xml
+C:\Workspace\Dormitory_Management_2021\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CopyComplete
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Workspace\Dormitory_Management_2021\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.dll
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.xml
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CopyComplete
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Users\nhoi\source\repos\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.dll
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.xml
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\Dormitory-Manager-master\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.dll
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.xml
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.dll
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.xml
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Cateen.F_Edit_Cateen.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Cateen.UC_Cateen.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.dll
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.xml
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Cateen.F_Edit_Cateen.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Cateen.UC_Cateen.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Downloads\GUI_BAITHI_19\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe.config
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.dll
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.xml
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.AssemblyReference.cache
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.SuggestedBindingRedirects.cache
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Login.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.F_Main.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Add_Bill.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Bill.F_Edit_Bill.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HoaDon.UCHoaDon.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Cateen.F_Edit_Cateen.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Cateen.UC_Cateen.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.SuaHopDong.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.ThemHopDong.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Contract.F_Search_Room.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.HopDong.UCHopDong.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.SuaNhanVien.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.ThemNhanVien.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.NhanVien.UCNhanVien.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Profile.F_Profile.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.SuaPhong.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.TaoPhong.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Phong.UCPhong.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Statistic.UC_Statistic.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.SuaSinhVien.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.SinhVien.UC_SinhVien.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.Properties.Resources.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.GenerateResource.cache
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CoreCompileInputs.cache
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.csproj.CopyComplete
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.exe
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.pdb
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\obj\Debug\Dormitory_Management_2021.GUI.Chart.uC_Chart1.resources
+C:\Users\nkien\Desktop\KTXSV (1)\ngu\KTXSV_BAITHI\Dormitory-Manager-master\KTX2021\bin\Debug\WebDriver.dll

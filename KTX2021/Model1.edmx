@@ -1,0 +1,1319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_Dormitory_Management_2021Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Bill">
+          <Key>
+            <PropertyRef Name="ID_Bill" />
+          </Key>
+          <Property Name="ID_Bill" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_Room" Type="nvarchar" MaxLength="100" />
+          <Property Name="Number_Water_Bill" Type="int" />
+          <Property Name="Number_Electricty_Bill" Type="int" />
+          <Property Name="Month_Bill" Type="date" />
+          <Property Name="Status_Bill" Type="bit" />
+          <Property Name="Total_Money_Bill" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbl_Contract">
+          <Key>
+            <PropertyRef Name="Identity_Card_Student_Contract" />
+          </Key>
+          <Property Name="ID_Contract" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_Student_Contract" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date_of_Birth_Student_Contract" Type="date" />
+          <Property Name="Sex_Student_Contract" Type="nvarchar" MaxLength="100" />
+          <Property Name="Identity_Card_Student_Contract" Type="bigint" Nullable="false" />
+          <Property Name="Home_Town_Student_Contract" Type="nvarchar(max)" />
+          <Property Name="Nation_Student_Contract" Type="nvarchar(max)" />
+          <Property Name="Class_Student_Contract" Type="nvarchar(max)" />
+          <Property Name="Name_Room" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone_Number_Student_Contract" Type="bigint" />
+          <Property Name="Parents_Name_Student_Contract" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone_Number_Parents_Student_Contract" Type="bigint" />
+          <Property Name="Start_Day_Contract" Type="date" />
+          <Property Name="Expiration_Date_Contract" Type="date" />
+          <Property Name="Total_Money_Contract" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbl_Employee">
+          <Key>
+            <PropertyRef Name="Identity_Card_Employee" />
+          </Key>
+          <Property Name="Name_Employee" Type="nvarchar" MaxLength="100" />
+          <Property Name="Identity_Card_Employee" Type="bigint" Nullable="false" />
+          <Property Name="Home_Town_Employee" Type="nvarchar" MaxLength="100" />
+          <Property Name="Work_Employee" Type="nvarchar" MaxLength="100" />
+          <Property Name="Salary_Employee" Type="bigint" />
+          <Property Name="Workplace_Employee" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone_Number_Employee" Type="bigint" />
+        </EntityType>
+        <EntityType Name="tbl_Room">
+          <Key>
+            <PropertyRef Name="Name_Room" />
+          </Key>
+          <Property Name="Building_Room" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name_Room" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Type_Room" Type="nvarchar" MaxLength="100" />
+          <Property Name="Maximum_Number_of_People_Room" Type="int" />
+          <Property Name="Current_Number_of_People_Room" Type="int" />
+        </EntityType>
+        <Association Name="FK__tbl_Bill__Name_R__4222D4EF">
+          <End Role="tbl_Room" Type="Self.tbl_Room" Multiplicity="0..1" />
+          <End Role="tbl_Bill" Type="Self.tbl_Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Room">
+              <PropertyRef Name="Name_Room" />
+            </Principal>
+            <Dependent Role="tbl_Bill">
+              <PropertyRef Name="Name_Room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_Contr__Name___2D27B809">
+          <End Role="tbl_Room" Type="Self.tbl_Room" Multiplicity="0..1" />
+          <End Role="tbl_Contract" Type="Self.tbl_Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Room">
+              <PropertyRef Name="Name_Room" />
+            </Principal>
+            <Dependent Role="tbl_Contract">
+              <PropertyRef Name="Name_Room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_Convert_To_Unsign" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="strInput" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Add_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Number_Water_Bill" Type="int" Mode="In" />
+          <Parameter Name="Number_Electricty_Bill" Type="int" Mode="In" />
+          <Parameter Name="Month_Bill" Type="date" Mode="In" />
+          <Parameter Name="Status_Bill" Type="bit" Mode="In" />
+          <Parameter Name="Total_Money_Bill" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="usp_Add_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Date_of_Birth_Student_Contract" Type="date" Mode="In" />
+          <Parameter Name="Sex_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Identity_Card_Student_Contract" Type="bigint" Mode="In" />
+          <Parameter Name="Home_Town_Student_Contract" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Nation_Student_Contract" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Class_Student_Contract" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Phone_Number_Student_Contract" Type="bigint" Mode="In" />
+          <Parameter Name="Parents_Name_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Phone_Number_Parents_Student_Contract" Type="bigint" Mode="In" />
+          <Parameter Name="Start_Day_Contract" Type="date" Mode="In" />
+          <Parameter Name="Expiration_Date_Contract" Type="date" Mode="In" />
+          <Parameter Name="Total_Money_Contract" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="usp_Add_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Identity_Card_Employee" Type="bigint" Mode="In" />
+          <Parameter Name="Home_Town_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Work_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Salary_Employee" Type="bigint" Mode="In" />
+          <Parameter Name="Workplace_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Phone_Number_Employee" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Add_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Building_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Type_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Maximum_Number_of_People_Room" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_Delete_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Bill" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Delete_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Contract" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Delete_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Identity_Card_Employee" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Delete_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Edit_Account" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Username_Account" Type="nvarchar" Mode="In" />
+          <Parameter Name="Old_Password_Account" Type="nvarchar" Mode="In" />
+          <Parameter Name="New_Password_Account" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Edit_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Bill" Type="bigint" Mode="In" />
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Number_Water_Bill" Type="int" Mode="In" />
+          <Parameter Name="Number_Electricty_Bill" Type="int" Mode="In" />
+          <Parameter Name="Month_Bill" Type="date" Mode="In" />
+          <Parameter Name="Status_Bill" Type="bit" Mode="In" />
+          <Parameter Name="Total_Money_Bill" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="usp_Edit_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Contract" Type="bigint" Mode="In" />
+          <Parameter Name="Name_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Start_Day_Contract" Type="date" Mode="In" />
+          <Parameter Name="Expiration_Date_Contract" Type="date" Mode="In" />
+          <Parameter Name="Total_Money_Contract" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="usp_Edit_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Identity_Card_Employee" Type="bigint" Mode="In" />
+          <Parameter Name="Home_Town_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Work_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Salary_Employee" Type="bigint" Mode="In" />
+          <Parameter Name="Workplace_Employee" Type="nvarchar" Mode="In" />
+          <Parameter Name="Phone_Number_Employee" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Edit_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Building_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Type_Room" Type="nvarchar" Mode="In" />
+          <Parameter Name="Maximum_Number_of_People_Room" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_Edit_Student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Date_of_Birth_Student_Contract" Type="date" Mode="In" />
+          <Parameter Name="Sex_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Identity_Card_Student_Contract" Type="bigint" Mode="In" />
+          <Parameter Name="Home_Town_Student_Contract" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Nation_Student_Contract" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Class_Student_Contract" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Phone_Number_Student_Contract" Type="bigint" Mode="In" />
+          <Parameter Name="Parents_Name_Student_Contract" Type="nvarchar" Mode="In" />
+          <Parameter Name="Phone_Number_Parents_Student_Contract" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Bill_by_Month_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Month_Bill" Type="date" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Bill_by_Name_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Bill_by_Status_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Status_Bill" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Contract_by_Class_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Class_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Contract_by_Home_Town_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Home_Town_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Contract_by_Name_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Contract_by_Name_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Employee_by_Home_Town_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Home_Town_Employee" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Employee_by_Identity_Card_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Identity_Card_Employee" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Employee_by_Name_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Employee" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Employee_by_Phone_Number_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Phone_Number_Employee" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Employee_by_Work_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Work_Employee" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Employee_by_Workplace_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Workplace_Employee" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Room_by_Name_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Room_By_Status" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="status" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Room_by_The_Building_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Building_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Room_by_Type_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Type_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Student_by_Class_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Class_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Student_by_Home_Town_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Home_Town_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Student_by_Identity_Card_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Identity_Card_Student_Contract" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Student_by_Name_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Room" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Student_by_Name_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_Student_by_Parents_Name_Student_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Parents_Name_Student_Contract" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Get_The_Building_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Work_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Get_Workplace_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Username_Account" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password_Account" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_Total_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Total_Bill_Unpaid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Total_Buiding_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Total_Contract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Total_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Total_Room" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Total_Room_Empty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="db_Dormitory_Management_2021ModelStoreContainer">
+          <EntitySet Name="tbl_Bill" EntityType="Self.tbl_Bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Contract" EntityType="Self.tbl_Contract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Employee" EntityType="Self.tbl_Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Room" EntityType="Self.tbl_Room" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tbl_Bill__Name_R__4222D4EF" Association="Self.FK__tbl_Bill__Name_R__4222D4EF">
+            <End Role="tbl_Room" EntitySet="tbl_Room" />
+            <End Role="tbl_Bill" EntitySet="tbl_Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_Contr__Name___2D27B809" Association="Self.FK__tbl_Contr__Name___2D27B809">
+            <End Role="tbl_Room" EntitySet="tbl_Room" />
+            <End Role="tbl_Contract" EntitySet="tbl_Contract" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_Dormitory_Management_2021Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Bill">
+          <Key>
+            <PropertyRef Name="ID_Bill" />
+          </Key>
+          <Property Name="ID_Bill" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_Room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Number_Water_Bill" Type="Int32" />
+          <Property Name="Number_Electricty_Bill" Type="Int32" />
+          <Property Name="Month_Bill" Type="DateTime" Precision="0" />
+          <Property Name="Status_Bill" Type="Boolean" />
+          <Property Name="Total_Money_Bill" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="tbl_Room" Relationship="Self.FK__tbl_Bill__Name_R__4222D4EF" FromRole="tbl_Bill" ToRole="tbl_Room" />
+        </EntityType>
+        <EntityType Name="tbl_Contract">
+          <Key>
+            <PropertyRef Name="Identity_Card_Student_Contract" />
+          </Key>
+          <Property Name="ID_Contract" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_Student_Contract" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date_of_Birth_Student_Contract" Type="DateTime" Precision="0" />
+          <Property Name="Sex_Student_Contract" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Identity_Card_Student_Contract" Type="Int64" Nullable="false" />
+          <Property Name="Home_Town_Student_Contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nation_Student_Contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Class_Student_Contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_Room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Number_Student_Contract" Type="Int64" />
+          <Property Name="Parents_Name_Student_Contract" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Number_Parents_Student_Contract" Type="Int64" />
+          <Property Name="Start_Day_Contract" Type="DateTime" Precision="0" />
+          <Property Name="Expiration_Date_Contract" Type="DateTime" Precision="0" />
+          <Property Name="Total_Money_Contract" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="tbl_Room" Relationship="Self.FK__tbl_Contr__Name___2D27B809" FromRole="tbl_Contract" ToRole="tbl_Room" />
+        </EntityType>
+        <EntityType Name="tbl_Employee">
+          <Key>
+            <PropertyRef Name="Identity_Card_Employee" />
+          </Key>
+          <Property Name="Name_Employee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Identity_Card_Employee" Type="Int64" Nullable="false" />
+          <Property Name="Home_Town_Employee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Work_Employee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Salary_Employee" Type="Int64" />
+          <Property Name="Workplace_Employee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Number_Employee" Type="Int64" />
+        </EntityType>
+        <EntityType Name="tbl_Room">
+          <Key>
+            <PropertyRef Name="Name_Room" />
+          </Key>
+          <Property Name="Building_Room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name_Room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type_Room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Maximum_Number_of_People_Room" Type="Int32" />
+          <Property Name="Current_Number_of_People_Room" Type="Int32" />
+          <NavigationProperty Name="tbl_Bill" Relationship="Self.FK__tbl_Bill__Name_R__4222D4EF" FromRole="tbl_Room" ToRole="tbl_Bill" />
+          <NavigationProperty Name="tbl_Contract" Relationship="Self.FK__tbl_Contr__Name___2D27B809" FromRole="tbl_Room" ToRole="tbl_Contract" />
+        </EntityType>
+        <Association Name="FK__tbl_Bill__Name_R__4222D4EF">
+          <End Role="tbl_Room" Type="Self.tbl_Room" Multiplicity="0..1" />
+          <End Role="tbl_Bill" Type="Self.tbl_Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Room">
+              <PropertyRef Name="Name_Room" />
+            </Principal>
+            <Dependent Role="tbl_Bill">
+              <PropertyRef Name="Name_Room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_Contr__Name___2D27B809">
+          <End Role="tbl_Room" Type="Self.tbl_Room" Multiplicity="0..1" />
+          <End Role="tbl_Contract" Type="Self.tbl_Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Room">
+              <PropertyRef Name="Name_Room" />
+            </Principal>
+            <Dependent Role="tbl_Contract">
+              <PropertyRef Name="Name_Room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_Dormitory_Management_2021Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Bill" EntityType="Self.tbl_Bill" />
+          <EntitySet Name="tbl_Contract" EntityType="Self.tbl_Contract" />
+          <EntitySet Name="tbl_Employee" EntityType="Self.tbl_Employee" />
+          <EntitySet Name="tbl_Room" EntityType="Self.tbl_Room" />
+          <AssociationSet Name="FK__tbl_Bill__Name_R__4222D4EF" Association="Self.FK__tbl_Bill__Name_R__4222D4EF">
+            <End Role="tbl_Room" EntitySet="tbl_Room" />
+            <End Role="tbl_Bill" EntitySet="tbl_Bill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_Contr__Name___2D27B809" Association="Self.FK__tbl_Contr__Name___2D27B809">
+            <End Role="tbl_Room" EntitySet="tbl_Room" />
+            <End Role="tbl_Contract" EntitySet="tbl_Contract" />
+          </AssociationSet>
+          <FunctionImport Name="usp_Add_Bill">
+            <Parameter Name="Name_Room" Mode="In" Type="String" />
+            <Parameter Name="Number_Water_Bill" Mode="In" Type="Int32" />
+            <Parameter Name="Number_Electricty_Bill" Mode="In" Type="Int32" />
+            <Parameter Name="Month_Bill" Mode="In" Type="DateTime" />
+            <Parameter Name="Status_Bill" Mode="In" Type="Boolean" />
+            <Parameter Name="Total_Money_Bill" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Add_Contract">
+            <Parameter Name="Name_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Date_of_Birth_Student_Contract" Mode="In" Type="DateTime" />
+            <Parameter Name="Sex_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Identity_Card_Student_Contract" Mode="In" Type="Int64" />
+            <Parameter Name="Home_Town_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Nation_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Class_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Name_Room" Mode="In" Type="String" />
+            <Parameter Name="Phone_Number_Student_Contract" Mode="In" Type="Int64" />
+            <Parameter Name="Parents_Name_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Phone_Number_Parents_Student_Contract" Mode="In" Type="Int64" />
+            <Parameter Name="Start_Day_Contract" Mode="In" Type="DateTime" />
+            <Parameter Name="Expiration_Date_Contract" Mode="In" Type="DateTime" />
+            <Parameter Name="Total_Money_Contract" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Add_Employee">
+            <Parameter Name="Name_Employee" Mode="In" Type="String" />
+            <Parameter Name="Identity_Card_Employee" Mode="In" Type="Int64" />
+            <Parameter Name="Home_Town_Employee" Mode="In" Type="String" />
+            <Parameter Name="Work_Employee" Mode="In" Type="String" />
+            <Parameter Name="Salary_Employee" Mode="In" Type="Int64" />
+            <Parameter Name="Workplace_Employee" Mode="In" Type="String" />
+            <Parameter Name="Phone_Number_Employee" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Add_Room">
+            <Parameter Name="Building_Room" Mode="In" Type="String" />
+            <Parameter Name="Name_Room" Mode="In" Type="String" />
+            <Parameter Name="Type_Room" Mode="In" Type="String" />
+            <Parameter Name="Maximum_Number_of_People_Room" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Delete_Bill">
+          <Parameter Name="ID_Bill" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Delete_Contract">
+          <Parameter Name="ID_Contract" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Delete_Employee">
+          <Parameter Name="Identity_Card_Employee" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Delete_Room">
+          <Parameter Name="Name_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Edit_Account">
+            <Parameter Name="Username_Account" Mode="In" Type="String" />
+            <Parameter Name="Old_Password_Account" Mode="In" Type="String" />
+            <Parameter Name="New_Password_Account" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Edit_Bill">
+            <Parameter Name="ID_Bill" Mode="In" Type="Int64" />
+            <Parameter Name="Name_Room" Mode="In" Type="String" />
+            <Parameter Name="Number_Water_Bill" Mode="In" Type="Int32" />
+            <Parameter Name="Number_Electricty_Bill" Mode="In" Type="Int32" />
+            <Parameter Name="Month_Bill" Mode="In" Type="DateTime" />
+            <Parameter Name="Status_Bill" Mode="In" Type="Boolean" />
+            <Parameter Name="Total_Money_Bill" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Edit_Contract">
+            <Parameter Name="ID_Contract" Mode="In" Type="Int64" />
+            <Parameter Name="Name_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Name_Room" Mode="In" Type="String" />
+            <Parameter Name="Start_Day_Contract" Mode="In" Type="DateTime" />
+            <Parameter Name="Expiration_Date_Contract" Mode="In" Type="DateTime" />
+            <Parameter Name="Total_Money_Contract" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Edit_Employee">
+            <Parameter Name="Name_Employee" Mode="In" Type="String" />
+            <Parameter Name="Identity_Card_Employee" Mode="In" Type="Int64" />
+            <Parameter Name="Home_Town_Employee" Mode="In" Type="String" />
+            <Parameter Name="Work_Employee" Mode="In" Type="String" />
+            <Parameter Name="Salary_Employee" Mode="In" Type="Int64" />
+            <Parameter Name="Workplace_Employee" Mode="In" Type="String" />
+            <Parameter Name="Phone_Number_Employee" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Edit_Room">
+            <Parameter Name="Building_Room" Mode="In" Type="String" />
+            <Parameter Name="Name_Room" Mode="In" Type="String" />
+            <Parameter Name="Type_Room" Mode="In" Type="String" />
+            <Parameter Name="Maximum_Number_of_People_Room" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Edit_Student">
+            <Parameter Name="Name_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Date_of_Birth_Student_Contract" Mode="In" Type="DateTime" />
+            <Parameter Name="Sex_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Identity_Card_Student_Contract" Mode="In" Type="Int64" />
+            <Parameter Name="Home_Town_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Nation_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Class_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Phone_Number_Student_Contract" Mode="In" Type="Int64" />
+            <Parameter Name="Parents_Name_Student_Contract" Mode="In" Type="String" />
+            <Parameter Name="Phone_Number_Parents_Student_Contract" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Bill" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Bill_Result)" />
+          <FunctionImport Name="usp_Get_Bill_by_Month_Bill" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Bill_by_Month_Bill_Result)">
+          <Parameter Name="Month_Bill" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Bill_by_Name_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Bill_by_Name_Room_Result)">
+          <Parameter Name="Name_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Bill_by_Status_Bill" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Bill_by_Status_Bill_Result)">
+          <Parameter Name="Status_Bill" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Contract_Result)" />
+          <FunctionImport Name="usp_Get_Contract_by_Class_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Contract_by_Class_Student_Contract_Result)">
+          <Parameter Name="Class_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Contract_by_Home_Town_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Contract_by_Home_Town_Student_Contract_Result)">
+          <Parameter Name="Home_Town_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Contract_by_Name_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Contract_by_Name_Room_Result)">
+          <Parameter Name="Name_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Contract_by_Name_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Contract_by_Name_Student_Contract_Result)">
+          <Parameter Name="Name_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_Result)" />
+          <FunctionImport Name="usp_Get_Employee_by_Home_Town_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_by_Home_Town_Employee_Result)">
+          <Parameter Name="Home_Town_Employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Employee_by_Identity_Card_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_by_Identity_Card_Employee_Result)">
+          <Parameter Name="Identity_Card_Employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Employee_by_Name_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_by_Name_Employee_Result)">
+          <Parameter Name="Name_Employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Employee_by_Phone_Number_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_by_Phone_Number_Employee_Result)">
+          <Parameter Name="Phone_Number_Employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Employee_by_Work_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_by_Work_Employee_Result)">
+          <Parameter Name="Work_Employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Employee_by_Workplace_Employee" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Employee_by_Workplace_Employee_Result)">
+          <Parameter Name="Workplace_Employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Room_Result)" />
+          <FunctionImport Name="usp_Get_Room_by_Name_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Room_by_Name_Room_Result)">
+          <Parameter Name="Name_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Room_By_Status" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Room_By_Status_Result)">
+          <Parameter Name="status" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Room_by_The_Building_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Room_by_The_Building_Room_Result)">
+          <Parameter Name="Building_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Room_by_Type_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Room_by_Type_Room_Result)">
+          <Parameter Name="Type_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Student" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_Result)" />
+          <FunctionImport Name="usp_Get_Student_by_Class_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_by_Class_Student_Contract_Result)">
+          <Parameter Name="Class_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Student_by_Home_Town_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_by_Home_Town_Student_Contract_Result)">
+          <Parameter Name="Home_Town_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Student_by_Identity_Card_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_by_Identity_Card_Student_Contract_Result)">
+          <Parameter Name="Identity_Card_Student_Contract" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Student_by_Name_Room" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_by_Name_Room_Result)">
+          <Parameter Name="Name_Room" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Student_by_Name_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_by_Name_Student_Contract_Result)">
+          <Parameter Name="Name_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_Student_by_Parents_Name_Student_Contract" ReturnType="Collection(db_Dormitory_Management_2021Model.usp_Get_Student_by_Parents_Name_Student_Contract_Result)">
+          <Parameter Name="Parents_Name_Student_Contract" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Get_The_Building_Room" ReturnType="Collection(String)" />
+          <FunctionImport Name="usp_Get_Work_Employee" ReturnType="Collection(String)" />
+          <FunctionImport Name="usp_Get_Workplace_Employee" ReturnType="Collection(String)" />
+          <FunctionImport Name="usp_Login" ReturnType="Collection(Int32)">
+            <Parameter Name="Username_Account" Mode="In" Type="String" />
+            <Parameter Name="Password_Account" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Total_Bill" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="usp_Total_Bill_Unpaid" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="usp_Total_Buiding_Room" ReturnType="Collection(String)" />
+          <FunctionImport Name="usp_Total_Contract" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="usp_Total_Employee" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="usp_Total_Room" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="usp_Total_Room_Empty" ReturnType="Collection(Int32)" />
+        </EntityContainer>
+        <ComplexType Name="usp_Get_Bill_Result">
+          <Property Type="Int64" Name="Mã_Hoá_Đơn" Nullable="false" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Nước" Nullable="true" />
+          <Property Type="Int32" Name="Số_Điện" Nullable="true" />
+          <Property Type="DateTime" Name="Tháng" Nullable="true" />
+          <Property Type="String" Name="Trạng_Thái" Nullable="false" MaxLength="15" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Bill_by_Month_Bill_Result">
+          <Property Type="Int64" Name="Mã_Hoá_Đơn" Nullable="false" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Nước" Nullable="true" />
+          <Property Type="Int32" Name="Số_Điện" Nullable="true" />
+          <Property Type="DateTime" Name="Tháng" Nullable="true" />
+          <Property Type="String" Name="Trạng_Thái" Nullable="false" MaxLength="15" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Bill_by_Name_Room_Result">
+          <Property Type="Int64" Name="Mã_Hoá_Đơn" Nullable="false" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Nước" Nullable="true" />
+          <Property Type="Int32" Name="Số_Điện" Nullable="true" />
+          <Property Type="DateTime" Name="Tháng" Nullable="true" />
+          <Property Type="String" Name="Trạng_Thái" Nullable="false" MaxLength="15" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Bill_by_Status_Bill_Result">
+          <Property Type="Int64" Name="Mã_Hoá_Đơn" Nullable="false" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Nước" Nullable="true" />
+          <Property Type="Int32" Name="Số_Điện" Nullable="true" />
+          <Property Type="DateTime" Name="Tháng" Nullable="true" />
+          <Property Type="String" Name="Trạng_Thái" Nullable="false" MaxLength="15" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Contract_Result">
+          <Property Type="Int64" Name="Mã_Hợp_Đồng" Nullable="false" />
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Bắt_Đầu" Nullable="true" />
+          <Property Type="DateTime" Name="Ngày_Hết_Hạn" Nullable="true" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Contract_by_Class_Student_Contract_Result">
+          <Property Type="Int64" Name="Mã_Hợp_Đồng" Nullable="false" />
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Bắt_Đầu" Nullable="true" />
+          <Property Type="DateTime" Name="Ngày_Hết_Hạn" Nullable="true" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Contract_by_Home_Town_Student_Contract_Result">
+          <Property Type="Int64" Name="Mã_Hợp_Đồng" Nullable="false" />
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Bắt_Đầu" Nullable="true" />
+          <Property Type="DateTime" Name="Ngày_Hết_Hạn" Nullable="true" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Contract_by_Name_Room_Result">
+          <Property Type="Int64" Name="Mã_Hợp_Đồng" Nullable="false" />
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Bắt_Đầu" Nullable="true" />
+          <Property Type="DateTime" Name="Ngày_Hết_Hạn" Nullable="true" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Contract_by_Name_Student_Contract_Result">
+          <Property Type="Int64" Name="Mã_Hợp_Đồng" Nullable="false" />
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Bắt_Đầu" Nullable="true" />
+          <Property Type="DateTime" Name="Ngày_Hết_Hạn" Nullable="true" />
+          <Property Type="Decimal" Name="Tổng_Tiền" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_by_Home_Town_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_by_Identity_Card_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_by_Name_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_by_Phone_Number_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_by_Work_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Employee_by_Workplace_Employee_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Công_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Lương" Nullable="true" />
+          <Property Type="String" Name="Địa_Điểm_Làm_Việc" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Room_Result">
+          <Property Type="String" Name="Toà_Nhà" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Loại_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Người_Tối_Đa" Nullable="true" />
+          <Property Type="Int32" Name="Số_Người_Hiện_Tại" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Room_by_Name_Room_Result">
+          <Property Type="String" Name="Toà_Nhà" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Loại_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Người_Tối_Đa" Nullable="true" />
+          <Property Type="Int32" Name="Số_Người_Hiện_Tại" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Room_By_Status_Result">
+          <Property Type="String" Name="Toà_Nhà" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Loại_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Người_Tối_Đa" Nullable="true" />
+          <Property Type="Int32" Name="Số_Người_Hiện_Tại" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Room_by_The_Building_Room_Result">
+          <Property Type="String" Name="Toà_Nhà" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Loại_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Người_Tối_Đa" Nullable="true" />
+          <Property Type="Int32" Name="Số_Người_Hiện_Tại" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Room_by_Type_Room_Result">
+          <Property Type="String" Name="Toà_Nhà" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Tên_Phòng" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Loại_Phòng" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Số_Người_Tối_Đa" Nullable="true" />
+          <Property Type="Int32" Name="Số_Người_Hiện_Tại" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_by_Class_Student_Contract_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_by_Home_Town_Student_Contract_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_by_Identity_Card_Student_Contract_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_by_Name_Room_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_by_Name_Student_Contract_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Get_Student_by_Parents_Name_Student_Contract_Result">
+          <Property Type="String" Name="Tên" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Ngày_Sinh" Nullable="true" />
+          <Property Type="String" Name="Giới_Tính" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="Căn_Cước_Công_Dân" Nullable="false" />
+          <Property Type="String" Name="Quê_Quán" Nullable="true" />
+          <Property Type="String" Name="Dân_Tộc" Nullable="true" />
+          <Property Type="String" Name="Lớp" Nullable="true" />
+          <Property Type="Int64" Name="SĐT" Nullable="true" />
+          <Property Type="String" Name="Phụ_Huynh" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="SĐT_Phụ_Huynh" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_Dormitory_Management_2021ModelStoreContainer" CdmEntityContainer="db_Dormitory_Management_2021Entities">
+          <EntitySetMapping Name="tbl_Bill">
+            <EntityTypeMapping TypeName="db_Dormitory_Management_2021Model.tbl_Bill">
+              <MappingFragment StoreEntitySet="tbl_Bill">
+                <ScalarProperty Name="ID_Bill" ColumnName="ID_Bill" />
+                <ScalarProperty Name="Name_Room" ColumnName="Name_Room" />
+                <ScalarProperty Name="Number_Water_Bill" ColumnName="Number_Water_Bill" />
+                <ScalarProperty Name="Number_Electricty_Bill" ColumnName="Number_Electricty_Bill" />
+                <ScalarProperty Name="Month_Bill" ColumnName="Month_Bill" />
+                <ScalarProperty Name="Status_Bill" ColumnName="Status_Bill" />
+                <ScalarProperty Name="Total_Money_Bill" ColumnName="Total_Money_Bill" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Contract">
+            <EntityTypeMapping TypeName="db_Dormitory_Management_2021Model.tbl_Contract">
+              <MappingFragment StoreEntitySet="tbl_Contract">
+                <ScalarProperty Name="ID_Contract" ColumnName="ID_Contract" />
+                <ScalarProperty Name="Name_Student_Contract" ColumnName="Name_Student_Contract" />
+                <ScalarProperty Name="Date_of_Birth_Student_Contract" ColumnName="Date_of_Birth_Student_Contract" />
+                <ScalarProperty Name="Sex_Student_Contract" ColumnName="Sex_Student_Contract" />
+                <ScalarProperty Name="Identity_Card_Student_Contract" ColumnName="Identity_Card_Student_Contract" />
+                <ScalarProperty Name="Home_Town_Student_Contract" ColumnName="Home_Town_Student_Contract" />
+                <ScalarProperty Name="Nation_Student_Contract" ColumnName="Nation_Student_Contract" />
+                <ScalarProperty Name="Class_Student_Contract" ColumnName="Class_Student_Contract" />
+                <ScalarProperty Name="Name_Room" ColumnName="Name_Room" />
+                <ScalarProperty Name="Phone_Number_Student_Contract" ColumnName="Phone_Number_Student_Contract" />
+                <ScalarProperty Name="Parents_Name_Student_Contract" ColumnName="Parents_Name_Student_Contract" />
+                <ScalarProperty Name="Phone_Number_Parents_Student_Contract" ColumnName="Phone_Number_Parents_Student_Contract" />
+                <ScalarProperty Name="Start_Day_Contract" ColumnName="Start_Day_Contract" />
+                <ScalarProperty Name="Expiration_Date_Contract" ColumnName="Expiration_Date_Contract" />
+                <ScalarProperty Name="Total_Money_Contract" ColumnName="Total_Money_Contract" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Employee">
+            <EntityTypeMapping TypeName="db_Dormitory_Management_2021Model.tbl_Employee">
+              <MappingFragment StoreEntitySet="tbl_Employee">
+                <ScalarProperty Name="Name_Employee" ColumnName="Name_Employee" />
+                <ScalarProperty Name="Identity_Card_Employee" ColumnName="Identity_Card_Employee" />
+                <ScalarProperty Name="Home_Town_Employee" ColumnName="Home_Town_Employee" />
+                <ScalarProperty Name="Work_Employee" ColumnName="Work_Employee" />
+                <ScalarProperty Name="Salary_Employee" ColumnName="Salary_Employee" />
+                <ScalarProperty Name="Workplace_Employee" ColumnName="Workplace_Employee" />
+                <ScalarProperty Name="Phone_Number_Employee" ColumnName="Phone_Number_Employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Room">
+            <EntityTypeMapping TypeName="db_Dormitory_Management_2021Model.tbl_Room">
+              <MappingFragment StoreEntitySet="tbl_Room">
+                <ScalarProperty Name="Building_Room" ColumnName="Building_Room" />
+                <ScalarProperty Name="Name_Room" ColumnName="Name_Room" />
+                <ScalarProperty Name="Type_Room" ColumnName="Type_Room" />
+                <ScalarProperty Name="Maximum_Number_of_People_Room" ColumnName="Maximum_Number_of_People_Room" />
+                <ScalarProperty Name="Current_Number_of_People_Room" ColumnName="Current_Number_of_People_Room" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_Add_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Add_Bill" />
+          <FunctionImportMapping FunctionImportName="usp_Add_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Add_Contract" />
+          <FunctionImportMapping FunctionImportName="usp_Add_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Add_Employee" />
+          <FunctionImportMapping FunctionImportName="usp_Add_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Add_Room" />
+          <FunctionImportMapping FunctionImportName="usp_Delete_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Delete_Bill" />
+          <FunctionImportMapping FunctionImportName="usp_Delete_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Delete_Contract" />
+          <FunctionImportMapping FunctionImportName="usp_Delete_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Delete_Employee" />
+          <FunctionImportMapping FunctionImportName="usp_Delete_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Delete_Room" />
+          <FunctionImportMapping FunctionImportName="usp_Edit_Account" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Edit_Account" />
+          <FunctionImportMapping FunctionImportName="usp_Edit_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Edit_Bill" />
+          <FunctionImportMapping FunctionImportName="usp_Edit_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Edit_Contract" />
+          <FunctionImportMapping FunctionImportName="usp_Edit_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Edit_Employee" />
+          <FunctionImportMapping FunctionImportName="usp_Edit_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Edit_Room" />
+          <FunctionImportMapping FunctionImportName="usp_Edit_Student" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Edit_Student" />
+          <FunctionImportMapping FunctionImportName="usp_Get_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Bill">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Bill_Result">
+                <ScalarProperty Name="Mã_Hoá_Đơn" ColumnName="Mã Hoá Đơn" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Số_Nước" ColumnName="Số Nước" />
+                <ScalarProperty Name="Số_Điện" ColumnName="Số Điện" />
+                <ScalarProperty Name="Tháng" ColumnName="Tháng" />
+                <ScalarProperty Name="Trạng_Thái" ColumnName="Trạng Thái" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Bill_by_Month_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Bill_by_Month_Bill">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Bill_by_Month_Bill_Result">
+                <ScalarProperty Name="Mã_Hoá_Đơn" ColumnName="Mã Hoá Đơn" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Số_Nước" ColumnName="Số Nước" />
+                <ScalarProperty Name="Số_Điện" ColumnName="Số Điện" />
+                <ScalarProperty Name="Tháng" ColumnName="Tháng" />
+                <ScalarProperty Name="Trạng_Thái" ColumnName="Trạng Thái" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Bill_by_Name_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Bill_by_Name_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Bill_by_Name_Room_Result">
+                <ScalarProperty Name="Mã_Hoá_Đơn" ColumnName="Mã Hoá Đơn" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Số_Nước" ColumnName="Số Nước" />
+                <ScalarProperty Name="Số_Điện" ColumnName="Số Điện" />
+                <ScalarProperty Name="Tháng" ColumnName="Tháng" />
+                <ScalarProperty Name="Trạng_Thái" ColumnName="Trạng Thái" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Bill_by_Status_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Bill_by_Status_Bill">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Bill_by_Status_Bill_Result">
+                <ScalarProperty Name="Mã_Hoá_Đơn" ColumnName="Mã Hoá Đơn" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Số_Nước" ColumnName="Số Nước" />
+                <ScalarProperty Name="Số_Điện" ColumnName="Số Điện" />
+                <ScalarProperty Name="Tháng" ColumnName="Tháng" />
+                <ScalarProperty Name="Trạng_Thái" ColumnName="Trạng Thái" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Contract_Result">
+                <ScalarProperty Name="Mã_Hợp_Đồng" ColumnName="Mã Hợp Đồng" />
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Ngày_Bắt_Đầu" ColumnName="Ngày Bắt Đầu" />
+                <ScalarProperty Name="Ngày_Hết_Hạn" ColumnName="Ngày Hết Hạn" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Contract_by_Class_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Contract_by_Class_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Contract_by_Class_Student_Contract_Result">
+                <ScalarProperty Name="Mã_Hợp_Đồng" ColumnName="Mã Hợp Đồng" />
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Ngày_Bắt_Đầu" ColumnName="Ngày Bắt Đầu" />
+                <ScalarProperty Name="Ngày_Hết_Hạn" ColumnName="Ngày Hết Hạn" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Contract_by_Home_Town_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Contract_by_Home_Town_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Contract_by_Home_Town_Student_Contract_Result">
+                <ScalarProperty Name="Mã_Hợp_Đồng" ColumnName="Mã Hợp Đồng" />
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Ngày_Bắt_Đầu" ColumnName="Ngày Bắt Đầu" />
+                <ScalarProperty Name="Ngày_Hết_Hạn" ColumnName="Ngày Hết Hạn" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Contract_by_Name_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Contract_by_Name_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Contract_by_Name_Room_Result">
+                <ScalarProperty Name="Mã_Hợp_Đồng" ColumnName="Mã Hợp Đồng" />
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Ngày_Bắt_Đầu" ColumnName="Ngày Bắt Đầu" />
+                <ScalarProperty Name="Ngày_Hết_Hạn" ColumnName="Ngày Hết Hạn" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Contract_by_Name_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Contract_by_Name_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Contract_by_Name_Student_Contract_Result">
+                <ScalarProperty Name="Mã_Hợp_Đồng" ColumnName="Mã Hợp Đồng" />
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Ngày_Bắt_Đầu" ColumnName="Ngày Bắt Đầu" />
+                <ScalarProperty Name="Ngày_Hết_Hạn" ColumnName="Ngày Hết Hạn" />
+                <ScalarProperty Name="Tổng_Tiền" ColumnName="Tổng Tiền" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee_by_Home_Town_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee_by_Home_Town_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_by_Home_Town_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee_by_Identity_Card_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee_by_Identity_Card_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_by_Identity_Card_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee_by_Name_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee_by_Name_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_by_Name_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee_by_Phone_Number_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee_by_Phone_Number_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_by_Phone_Number_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee_by_Work_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee_by_Work_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_by_Work_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Employee_by_Workplace_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Employee_by_Workplace_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Employee_by_Workplace_Employee_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Công_Việc" ColumnName="Công Việc" />
+                <ScalarProperty Name="Lương" ColumnName="Lương" />
+                <ScalarProperty Name="Địa_Điểm_Làm_Việc" ColumnName="Địa Điểm Làm Việc" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Room_Result">
+                <ScalarProperty Name="Toà_Nhà" ColumnName="Toà Nhà" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Loại_Phòng" ColumnName="Loại Phòng" />
+                <ScalarProperty Name="Số_Người_Tối_Đa" ColumnName="Số Người Tối Đa" />
+                <ScalarProperty Name="Số_Người_Hiện_Tại" ColumnName="Số Người Hiện Tại" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Room_by_Name_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Room_by_Name_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Room_by_Name_Room_Result">
+                <ScalarProperty Name="Toà_Nhà" ColumnName="Toà Nhà" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Loại_Phòng" ColumnName="Loại Phòng" />
+                <ScalarProperty Name="Số_Người_Tối_Đa" ColumnName="Số Người Tối Đa" />
+                <ScalarProperty Name="Số_Người_Hiện_Tại" ColumnName="Số Người Hiện Tại" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Room_By_Status" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Room_By_Status">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Room_By_Status_Result">
+                <ScalarProperty Name="Toà_Nhà" ColumnName="Toà Nhà" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Loại_Phòng" ColumnName="Loại Phòng" />
+                <ScalarProperty Name="Số_Người_Tối_Đa" ColumnName="Số Người Tối Đa" />
+                <ScalarProperty Name="Số_Người_Hiện_Tại" ColumnName="Số Người Hiện Tại" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Room_by_The_Building_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Room_by_The_Building_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Room_by_The_Building_Room_Result">
+                <ScalarProperty Name="Toà_Nhà" ColumnName="Toà Nhà" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Loại_Phòng" ColumnName="Loại Phòng" />
+                <ScalarProperty Name="Số_Người_Tối_Đa" ColumnName="Số Người Tối Đa" />
+                <ScalarProperty Name="Số_Người_Hiện_Tại" ColumnName="Số Người Hiện Tại" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Room_by_Type_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Room_by_Type_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Room_by_Type_Room_Result">
+                <ScalarProperty Name="Toà_Nhà" ColumnName="Toà Nhà" />
+                <ScalarProperty Name="Tên_Phòng" ColumnName="Tên Phòng" />
+                <ScalarProperty Name="Loại_Phòng" ColumnName="Loại Phòng" />
+                <ScalarProperty Name="Số_Người_Tối_Đa" ColumnName="Số Người Tối Đa" />
+                <ScalarProperty Name="Số_Người_Hiện_Tại" ColumnName="Số Người Hiện Tại" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student_by_Class_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student_by_Class_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_by_Class_Student_Contract_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student_by_Home_Town_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student_by_Home_Town_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_by_Home_Town_Student_Contract_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student_by_Identity_Card_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student_by_Identity_Card_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_by_Identity_Card_Student_Contract_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student_by_Name_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student_by_Name_Room">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_by_Name_Room_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student_by_Name_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student_by_Name_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_by_Name_Student_Contract_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_Student_by_Parents_Name_Student_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Student_by_Parents_Name_Student_Contract">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_Dormitory_Management_2021Model.usp_Get_Student_by_Parents_Name_Student_Contract_Result">
+                <ScalarProperty Name="Tên" ColumnName="Tên" />
+                <ScalarProperty Name="Ngày_Sinh" ColumnName="Ngày Sinh" />
+                <ScalarProperty Name="Giới_Tính" ColumnName="Giới Tính" />
+                <ScalarProperty Name="Căn_Cước_Công_Dân" ColumnName="Căn Cước Công Dân" />
+                <ScalarProperty Name="Quê_Quán" ColumnName="Quê Quán" />
+                <ScalarProperty Name="Dân_Tộc" ColumnName="Dân Tộc" />
+                <ScalarProperty Name="Lớp" ColumnName="Lớp" />
+                <ScalarProperty Name="SĐT" ColumnName="SĐT" />
+                <ScalarProperty Name="Phụ_Huynh" ColumnName="Phụ Huynh" />
+                <ScalarProperty Name="SĐT_Phụ_Huynh" ColumnName="SĐT Phụ Huynh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Get_The_Building_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_The_Building_Room" />
+          <FunctionImportMapping FunctionImportName="usp_Get_Work_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Work_Employee" />
+          <FunctionImportMapping FunctionImportName="usp_Get_Workplace_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Get_Workplace_Employee" />
+          <FunctionImportMapping FunctionImportName="usp_Login" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Login" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Bill" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Bill" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Bill_Unpaid" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Bill_Unpaid" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Buiding_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Buiding_Room" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Contract" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Contract" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Employee" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Employee" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Room" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Room" />
+          <FunctionImportMapping FunctionImportName="usp_Total_Room_Empty" FunctionName="db_Dormitory_Management_2021Model.Store.usp_Total_Room_Empty" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
